@@ -2,11 +2,11 @@
 // Created by simon on 12/24/2022.
 //
 
+#include "iostream"
 #include "ConsoleOutput.h"
 #include "Game.h"
-#include "iostream"
 
-void drawScoreboard(unsigned char *board, int score) {
+void ConsoleOutput::drawScoreboard(unsigned char *board, int score) {
 
 }
 
@@ -17,6 +17,7 @@ void ConsoleOutput::renderBuffer() {
 void ConsoleOutput::render(unsigned char *board, int score, std::string nextBlock) {
 
     drawScoreboard(board, score);
+    std::cout << "render" << std::endl;
 
     for(int x = 0; x < Game::nFieldW; x++) {
         for(int y = 0; y < Game::nFieldH; y++) {
@@ -30,6 +31,5 @@ void ConsoleOutput::render(unsigned char *board, int score, std::string nextBloc
     for(int x = 0; x < Game::nFieldW; x++) {
         bottomline += "#";
     }
-    std::cout << bottomline << std::endl;
 }
 

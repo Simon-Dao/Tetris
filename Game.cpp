@@ -9,7 +9,6 @@ Game::Game() {
     board = initBoard();
     tetromino = initTetromino();
     consoleRenderer = ConsoleOutput();
-
     std::cout << "game is starting..." << std::endl;
 }
 
@@ -75,7 +74,7 @@ unsigned char *Game::initBoard() {
 }
 
 void Game::gameLoop() {
-    consoleRenderer.render(board, score, tetromino[0]);
+   consoleRenderer.render(board, score, tetromino[0]);
 }
 
 int Game::rotate(int px, int py, int r) {

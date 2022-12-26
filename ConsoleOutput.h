@@ -5,8 +5,7 @@
 #ifndef TETRIS_CONSOLEOUTPUT_H
 #define TETRIS_CONSOLEOUTPUT_H
 
-
-#include "Game.h"
+#include "iostream"
 
 class ConsoleOutput {
 
@@ -17,6 +16,8 @@ public:
     void render(unsigned char* board, int score, std::string nextBlock);
 
     void renderBuffer();
+
+    void drawScoreboard(unsigned char *board, int score);
 };
 
 
